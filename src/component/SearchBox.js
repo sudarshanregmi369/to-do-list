@@ -1,19 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
 const SearchBox = ()=>{
-    const  [searchInput, setSearchInput ] = useState([]);
+    
     return <div >
 
 <input
    className  ="search"
-   placeholder="Add here"/>
+   placeholder="Add here"
+/>
    <h1 >To- do -list</h1>
-   <button  className='button'> 
+   <button  className='button' > 
    ++
    
    </button>
    </div>
-//    onChange={handleChange}
+//    // onClick={handleClick}   onChange={handleChange}
 //    value={searchInput} />
    
 
