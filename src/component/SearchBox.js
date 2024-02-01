@@ -1,22 +1,28 @@
 import React from 'react'
 import { useState } from 'react'
-const SearchBox = ()=>{
-    
-    return <div >
 
+
+const SearchBox = (props)=>{
+   const [input, setInput] = useState([]);
+   return ( 
+   <div> 
+      <div className='search'>
 <input
-   className  ="search"
-   placeholder="Add here"
-/>
-   <h1 >To- do -list</h1>
-   <button  className='button' > 
-   ++
-   
-   </button>
+   type="text"
+   placeholder="Add Task"
+   value={input}  
+   onChange={(event)=>{
+      setInput(event.target.value)
+   }} />
    </div>
-//    // onClick={handleClick}   onChange={handleChange}
-//    value={searchInput} />
+ <button  className='button' 
+ onClick={()=>{
+   props.addList(input)
+   setInput('')
+ }} >  AD
+   </button>
    
-
-}
+   </div>
+     
+)}
 export default SearchBox;
